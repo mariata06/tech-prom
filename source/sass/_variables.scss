@@ -1,0 +1,46 @@
+//COLOR VARIABLES
+$green: #00b200; //цвет текста
+$black: #000000; //цвет текста
+$medium-black: #000b1d; //цвет текста
+$grey: #666666;  //цвет текста
+$light-grey: #999999; //цвет текста
+$white: #ffffff; //цвет текста
+$blue: #006db5; //цвет текста
+
+$max-tablet-width: 1024px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
+$min-tablet-width: 768px;
+$max-mobile-width: 767px; // максимум для версии пишем когда идем от desktop к mobile (320px - 767px;)
+$min-mobile-width: 320px;
+
+//RETINA VARIABLES
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+//FONTS VARIABLES
+$font-12: 12px;
+$font-14: 14px;
+$font-16: 16px;
+$font-18: 18px;
+$font-22: 22px;
+$font-26: 26px;
+$font-34: 34px;
+$font-26: 26px;
+$font-38: 38px;
+$font-45: 45px;
+
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+$height-16: 16px;
+$height-18: 18px;
+$height-21: 21px;
+$height-23: 23px;
+$height-24: 24px;
+$height-29: 29px;
+$height-34: 34px;
+$height-38: 38px;
+$height-44: 44px;
+$height-49: 49px;
+$height-59: 59px;

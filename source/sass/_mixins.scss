@@ -1,0 +1,28 @@
+@mixin reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin title ($size, $height, $weight, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin text ($size, $height, $weight) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin text-size-height ($size, $height) {
+  font-size: $size;
+  line-height: $height;
+}

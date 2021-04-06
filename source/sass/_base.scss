@@ -1,0 +1,72 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.disable-scroll {
+  overflow: hidden;
+}
+
+.enable-scroll {
+  overflow: visible;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: "poppins", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+
+  &:hover,
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page-main,
+.page-catalog,
+.page-card {
+  flex: 1 0 auto;
+}
+
+.page-header {
+  flex: 1 0 auto;
+}
