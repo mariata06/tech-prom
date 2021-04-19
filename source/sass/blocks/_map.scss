@@ -1,0 +1,57 @@
+.map {
+  min-height: 400px;
+  background-image: url("../img/map-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/map-desktop@2x.png");
+  }
+
+  @media (max-width: 1280px) {
+    background-image: url("../img/map-1280@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-1280@2x.png");
+    }
+  }
+}
+
+.map__wrapper {
+  position: relative;
+  padding: 69px 195px 85px 84px;
+  width: 686px;
+  min-height: 335px;
+  margin-top: 41px;
+  margin-left: 250px;
+  background-image: url("../img/address-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/address-desktop@2x.png");
+  }
+}
+
+.map__address {
+  width: 366px;
+  position: absolute;
+
+  p {
+    @include reset;
+    @include text ($font-16, $height-16, $regular);
+    color: $light-grey;
+
+    &:first-child {
+      @include text ($font-36, $height-36, $semi-bold);
+      color: $green;
+      margin-bottom: 8px;
+    }
+  }
+
+  .map__address-paragraph {
+    @include text ($font-16, $height-18, $bold);
+    color: $black;
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,48 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 372px 6fr 3fr;
+  grid-template-areas: "logo menu contacts";
+  align-items: center;
+}
+
+.navigation__logo {
+  grid-area: logo;
+}
+
+.navigation__menu {
+  grid-area: menu;
+}
+
+.navigation__contacts {
+  grid-area: contacts;
+  justify-content: flex-end;
+  display: flex;
+
+  span {
+    color: $blue;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+  }
+
+  a {
+    width: 241px;
+    color: $dark-blue;
+    font-size: 30px;
+    line-height: 36.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+.navigation__icon--phone {
+  margin-right: 20px;
+}
+
+.navigation__burger-menu {
+  margin-left: 16px;
+  align-self: baseline;
+}

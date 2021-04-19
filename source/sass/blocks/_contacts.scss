@@ -1,0 +1,35 @@
+.contacts {
+  h3 {
+    @include reset;
+    @include title ($font-22, $height-18, $regular, $light-grey);
+    margin-bottom: 28px;
+  }
+
+  ul {
+    @include list-reset;
+  }
+
+  li {
+    @include text ($font-16, $height-16, $regular);
+    color: $medium-grey;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 16px;
+  }
+
+  .contacts__icon--phone {
+    transform: scale(0.7);
+    margin-right: 8px;
+    margin-left: -5px;
+  }
+}
+
+.contacts__item--phone {
+  span {
+    @include text ($font-24, $height-16, $semi-bold);
+  }
+}

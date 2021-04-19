@@ -7,12 +7,9 @@
   <title>Tech prom</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link rel="preload" href="fonts/cormorantgaramond-italic.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/cormorantgaramond-semibold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/cormorantgaramond-bold.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/poppins-regular.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/poppins-medium.woff2" as="font" type="font/woff2" crossorigin="">
-  <link rel="preload" href="fonts/poppins-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/proximanova-semibold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/proximanova-bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="css/style.min.css" as="style">
   <!--<link rel="preload" href="js/main.js" as="script" />-->
   <link rel="stylesheet" href="css/style.min.css">
@@ -20,10 +17,445 @@
 
 <body>
   <div class="page-wrapper">
-    <header class="page-header">
-      <div class="page-header__wrapper">
-        <h1>Производство специальных неорганических материалов</h1>
-      </div>
+    <header class="page-header container">
+      <nav class="page-header__navigation navigation">
+        <div class="navigation__logo logo logo--main logo--main--nojs">
+          <picture>
+            <source srcset="img/logo-tablet.png" media="(max-width: 768px)">
+            <source srcset="img/logo-1024.png" media="(max-width: 1024px)">
+            <source srcset="img/logo-1280.png" media="(max-width: 1280px)">
+            <img src="img/logo-main.png" width="289" height="116" alt="Логотип сайта Техпром">
+          </picture>
+        </div>
+        <div class="navigation__logo logo logo--scroll logo--scroll--nojs">
+          <a>
+            <picture>
+              <img src="img/logo-scroll.png" width="200" height="81" alt="Логотип сайта Техпром">
+            </picture>
+          </a>
+        </div>
+        <ul class="navigation__menu menu">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a class="menu__link menu__link--current" href="#">Производство</a></li>
+          <li><a href="#">Продукция</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="navigation__contacts">
+          <a href="tel:+74997070769">
+            <svg class="navigation__icon navigation__icon--phone" width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg><span>+7(499)&nbsp;</span>707-07-69<span>Заказать звонок</span>
+          </a>
+          <button class="navigation__burger-menu button">
+            <svg width="25" height="25">
+              <use xlink:href="img/sprite.svg#icon-burger"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
     </header>
+
+    <main class="page-main container">
+      <section class="info">
+        <div class="info__products products products__wrapper">
+          <h3>Производство</h3>
+          <div id="accordion" class="products__accordion accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab1" aria-label="Неорганические материалы">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Неорганические материалы
+              </button>
+              <div class="accordion__item-content" id="tab1">
+                Компания специализируется на производстве специальных неорганических материалов на основе редкоземельных
+                металлов.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab2" aria-label="Красители и пигменты">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Красители и пигменты
+              </button>
+              <div class="accordion__item-content" id="tab2">
+                Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых
+                методом твердофазного синтеза.
+              </div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab3" aria-label="Прочие химические продукты">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Прочие химические продукты
+              </button>
+              <div class="accordion__item-content" id="tab3">
+                Производство прочих химических продуктов, не включенных в другие группировки.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info__about about about__wrapper">
+          <h3>Информационный раздел</h3>
+          <div id="accordion" class="products__accordion accordion">
+            <div class="accordion__item accordion__item--active">
+              <button class="accordion__trigger button" rel="tab1" aria-label="О компании">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                О компании
+              </button>
+              <ul class="accordion__item-content">
+                <li><a class="accordion__link accordion__link--active" href="#">Виды деятельности</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Лицензии и сертификаты</a></li>
+                <li><a href="#">Патенты</a></li>
+                <li><a href="#">Специальная оценка условий труда</a></li>
+                <li><a href="#">Реализованные проекты</a></li>
+                <li><a href="#">Партнеры</a></li>
+              </ul>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab2" aria-label="Техническая поддержка">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Техническая поддержка
+              </button>
+              <ul class="accordion__item-content">
+                <li><a class="accordion__link accordion__link--active" href="#">Виды деятельности</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Лицензии и сертификаты</a></li>
+                <li><a href="#">Патенты</a></li>
+                <li><a href="#">Специальная оценка условий труда</a></li>
+                <li><a href="#">Реализованные проекты</a></li>
+                <li><a href="#">Партнеры</a></li>
+              </ul>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab3" aria-label="Цены">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Цены
+              </button>
+              <ul class="accordion__item-content">
+                <li><a class="accordion__link accordion__link--active" href="#">Виды деятельности</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Лицензии и сертификаты</a></li>
+                <li><a href="#">Патенты</a></li>
+                <li><a href="#">Специальная оценка условий труда</a></li>
+                <li><a href="#">Реализованные проекты</a></li>
+                <li><a href="#">Партнеры</a></li>
+              </ul>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger button" rel="tab3" aria-label="Контакты">
+                <svg class="accordion__item-svg" width="6" height="10">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+                Контакты
+              </button>
+              <ul class="accordion__item-content">
+                <li><a class="accordion__link accordion__link--active" href="#">Виды деятельности</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="#">Лицензии и сертификаты</a></li>
+                <li><a href="#">Патенты</a></li>
+                <li><a href="#">Специальная оценка условий труда</a></li>
+                <li><a href="#">Реализованные проекты</a></li>
+                <li><a href="#">Партнеры</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="production">
+        <a href="#" class="production__item production__item--materials">
+          <picture>
+            <!-- 1х: 288px; 2x: 576px -->
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/materials-mobile@1x.webp 1x, img/materials-mobile@2x.webp 2x">
+            <!-- 1х: 466px; 2x: 932px -->
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/materials-tablet@1x.webp 1x, img/materials-tablet@2x.webp 2x">
+            <!-- 1х: 625px; 2x: 1250px -->
+            <source type="image/webp" media="(max-width: 1279px)" srcset="img/materials-1024@1x.webp 1x, img/materials-1024@2x.webp 2x">
+            <!-- 1х: 585px; 2x: 1170px -->
+            <source type="image/webp" media="(max-width: 1919px)" srcset="img/materials-1280@1x.webp 1x, img/materials-1280@2x.webp 2x">
+            <!-- 1х: 728px; 2x: 1456px -->
+            <source type="image/webp" srcset="img/materials-desktop@1x.webp 1x, img/materials-desktop@2x.webp 2x">
+            <!-- 1х: 728px; 2x: 1456px -->
+            <img data-src="img/materials-desktop@1x.png" src="img/materials-desktop@1x.png" srcset="img/materials-desktop@2x.png 2x" alt="Производстве специальных неорганических материалов на основе редкоземельных металлов" width="728" height="350" loading="lazy" class="lazyload">
+          </picture>
+          <p>Производстве специальных неорганических материалов на основе редкоземельных металлов</p>
+        </a>
+        <div class="production__wrapper">
+          <a href="#" class="production__item">
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/pigments-mobile@1x.webp 1x, img/pigments-mobile@2x.webp 2x">
+              <!-- 1х: 228px; 2x: 456px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/pigments-tablet@1x.webp 1x, img/pigments-tablet@2x.webp 2x">
+              <!-- 1х: 306px; 2x: 612px -->
+              <source type="image/webp" media="(max-width: 1279px)" srcset="img/pigments-1024@1x.webp 1x, img/pigments-1024@2x.webp 2x">
+              <!-- 1х: 286px; 2x: 572px -->
+              <source type="image/webp" media="(max-width: 1919px)" srcset="img/pigments-1280@1x.webp 1x, img/pigments-1280@2x.webp 2x">
+              <!-- 1х: 356px; 2x: 167px -->
+              <source type="image/webp" srcset="img/pigments-desktop@1x.webp 1x, img/pigments-desktop@2x.webp 2x">
+              <!-- 1х: 356px; 2x: 167px -->
+              <img data-src="img/pigments-desktop@1x.png" src="img/pigments-desktop@1x.png" srcset="img/pigments-desktop@2x.png 2x" alt="Производство красителей и пигментов" width="356" height="167" loading="lazy" class="lazyload">
+            </picture>
+            <p>Производство <span>красителей и пигментов</span></p>
+          </a>
+          <a href="#" class="production__item">
+            <picture>
+              <!-- 1х: 288px; 2x: 576px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/cemicals-mobile@1x.webp 1x, img/cemicals-mobile@2x.webp 2x">
+              <!-- 1х: 228px; 2x: 456px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/cemicals-tablet@1x.webp 1x, img/cemicals-tablet@2x.webp 2x">
+              <!-- 1х: 306px; 2x: 612px -->
+              <source type="image/webp" media="(max-width: 1279px)" srcset="img/cemicals-1024@1x.webp 1x, img/cemicals-1024@2x.webp 2x">
+              <!-- 1х: 286px; 2x: 572px -->
+              <source type="image/webp" media="(max-width: 1919px)" srcset="img/cemicals-1280@1x.webp 1x, img/cemicals-1280@2x.webp 2x">
+              <!-- 1х: 356px; 2x: 167px -->
+              <source type="image/webp" srcset="img/cemicals-desktop@1x.webp 1x, img/cemicals-desktop@2x.webp 2x">
+              <!-- 1х: 356px; 2x: 167px -->
+              <img data-src="img/cemicals-desktop@1x.png" src="img/cemicals-desktop@1x.png" srcset="img/cemicals-desktop@2x.png 2x" alt="Производство прочих химических продуктов" width="356" height="167" loading="lazy" class="lazyload">
+            </picture>
+            <p>Производство <span>прочих&nbsp;химических продуктов</span></p>
+          </a>
+        </div>
+        <div class="production__desc">
+          <h1>Производство специальных неорганических материалов</h1>
+          <p>Компания <span>ООО «ТЕХПРОМ»</span> создана в 2013 году. С 2018 г. компания специализируется на
+            производстве специальных неорганических материалов на основе редкоземельных металлов, предназначенных для
+            использования в лазерной технике, оптических приборах, полиграфии.</p>
+          <p>Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых методом
+            твердофазного синтеза.</p>
+          <p>В своем арсенале компания имеет современное оборудование и технологии.
+            Особенное внимание руководство компании уделяет экологическому менеджменту, и условиям труда сотрудников.
+            Все производственные выбросы и отходы проходят тщательную нейтрализацию. Все сотрудники компании обеспечены
+            в необходимом объеме специальной одеждой и средствами индивидуальной защиты.</p>
+          <a href="#">Подробнее >>></a>
+        </div>
+      </section>
+
+      <section class="specialisation">
+        <h2>Специализация производства</h2>
+        <p>Компания специализируется на производстве специальных неорганических материалов на основе редкоземельных
+          металлов, предназначенных для использования в лазерной технике, оптических приборах, полиграфии.</p>
+        <div class="specialisation__wrapper">
+          <div class="specialisation__item">
+            <a href="#">
+              <div class="specialisation__item-text">
+                <h3>Специальные неорганические материалы</h3>
+                <p>Компания специализируется на производстве специальных неорганических материалов на основе
+                  редкоземельных металлов.</p>
+              </div>
+              <div class="specialisation__item-image">
+                <picture>
+                  <!-- 1х: 87px; 2x: 174px -->
+                  <source type="image/webp" media="(max-width: 320px)" srcset="img/inorganics-mobile@1x.webp 1x, img/inorganics-mobile@2x.webp 2x">
+                  <!-- 1х: 103px; 2x: 206px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/inorganics-tablet@1x.webp 1x, img/inorganics-tablet@2x.webp 2x">
+                  <!-- 1х: 139px; 2x: 276px -->
+                  <source type="image/webp" media="(max-width: 1024px)" srcset="img/inorganics-1024@1x.webp 1x, img/inorganics-1024@2x.webp 2x">
+                  <!-- 1х: 130px; 2x: 259px -->
+                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/inorganics-1280@1x.webp 1x, img/inorganics-1280@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <source type="image/webp" srcset="img/inorganics-desktop@1x.webp 1x, img/inorganics-desktop@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <img data-src="img/inorganics-desktop@1x.png" src="img/inorganics-desktop@1x.png" srcset="img/inorganics-desktop@2x.png 2x" alt="Специальные неорганические материалы" width="160" height="160" loading="lazy" class="lazyload">
+                </picture>
+              </div>
+            </a>
+          </div>
+          <div class="specialisation__item">
+            <a href="#">
+              <div class="specialisation__item-text">
+                <h3>Красители и пигменты</h3>
+                <p>Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых
+                  методом твердофазного синтеза.</p>
+              </div>
+              <div class="specialisation__item-image">
+                <picture>
+                  <!-- 1х: 87px; 2x: 174px -->
+                  <source type="image/webp" media="(max-width: 320px)" srcset="img/dyes-mobile@1x.webp 1x, img/dyes-mobile@2x.webp 2x">
+                  <!-- 1х: 103px; 2x: 206px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/dyes-tablet@1x.webp 1x, img/dyes-tablet@2x.webp 2x">
+                  <!-- 1х: 139px; 2x: 276px -->
+                  <source type="image/webp" media="(max-width: 1024px)" srcset="img/dyes-1024@1x.webp 1x, img/dyes-1024@2x.webp 2x">
+                  <!-- 1х: 130px; 2x: 259px -->
+                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/dyes-1280@1x.webp 1x, img/dyes-1280@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <source type="image/webp" srcset="img/dyes-desktop@1x.webp 1x, img/dyes-desktop@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <img data-src="img/dyes-desktop@1x.png" src="img/dyes-desktop@1x.png" srcset="img/dyes-desktop@2x.png 2x" alt="Красители и пигменты" width="160" height="160" loading="lazy" class="lazyload">
+                </picture>
+              </div>
+            </a>
+          </div>
+          <div class="specialisation__item">
+            <a href="#">
+              <div class="specialisation__item-text">
+                <h3>Прочие химические продукты</h3>
+                <p>Производство прочих химических продуктов, не включенных в другие группировки.</p>
+              </div>
+              <div class="specialisation__item-image">
+                <picture>
+                  <!-- 1х: 87px; 2x: 174px -->
+                  <source type="image/webp" media="(max-width: 320px)" srcset="img/cemicals-products-mobile@1x.webp 1x, img/cemicals-products-mobile@2x.webp 2x">
+                  <!-- 1х: 103px; 2x: 206px -->
+                  <source type="image/webp" media="(max-width: 768px)" srcset="img/cemicals-products-tablet@1x.webp 1x, img/cemicals-products-tablet@2x.webp 2x">
+                  <!-- 1х: 139px; 2x: 276px -->
+                  <source type="image/webp" media="(max-width: 1024px)" srcset="img/cemicals-products-1024@1x.webp 1x, img/cemicals-products-1024@2x.webp 2x">
+                  <!-- 1х: 130px; 2x: 259px -->
+                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/cemicals-products-1280@1x.webp 1x, img/cemicals-products-1280@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <source type="image/webp" srcset="img/cemicals-products-desktop@1x.webp 1x, img/cemicals-products-desktop@2x.webp 2x">
+                  <!-- 1х: 160px; 2x: 320px -->
+                  <img data-src="img/cemicals-products-desktop@1x.png" src="img/cemicals-products-desktop@1x.png" srcset="img/cemicals-products-desktop@2x.png 2x" alt="Прочие химические продукты" width="160" height="160" loading="lazy" class="lazyload">
+                </picture>
+              </div>
+            </a>
+          </div>
+          <div class="specialisation__item specialisation__item--details">
+            <h3>Особенное внимание</h3>
+            <p>Особенное внимание руководство компании уделяет экологическому менеджменту, и условиям труда сотрудников.
+              Все производственные выбросы и отходы проходят тщательную нейтрализацию.</p>
+            <a href="#">Подробнее >>></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="map">
+      <div class="map__content container">
+        <div class="map__wrapper">
+          <div class="map__address">
+            <p>Мы рядом!</p>
+            <p class="map__address-paragraph">г. Москва ул. Пречистенка дом 40/2 стр. 2</p>
+            <p>С 2018 г. компания специализируется на производстве специальных неорганических материалов на основе
+              редкоземельных металлов</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="page-footer__menu-wrapper">
+        <div class="page-footer__menu footer-menu footer-menu--top container">
+          <div class="footer-menu__phones">
+            <a href="tel:+74997070769">
+              <svg width="24" height="24" class="footer-menu__icon footer-menu__icon--phone">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>+7(499)&nbsp;707-07-69
+            </a>
+            <a href="tel:+74962171314">+7(496)&nbsp;217-13-14</a>
+            <button type="button" class="footer-menu__button button">
+              <svg width="19" height="19">
+                <use xlink:href="img/sprite.svg#icon-calendar"></use>
+              </svg>
+              Отправить заявку</button>
+          </div>
+          <div class="footer-menu__social">
+            <ul>
+              <li>
+                <a href="https://vkontakte.com/" aria-label="vkontakte" class="page-footer__social-link">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-vkontakte"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/" aria-label="instagram" class="page-footer__social-link">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://facebook.com/" aria-label="facebook" class="page-footer__social-link">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://youtube.com/" aria-label="youtube" class="page-footer__social-link">
+                  <svg width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+            <p>Дружите с нами</p>
+          </div>
+        </div>
+      </div>
+      <div class="page-footer__main-content container">
+        <div class="page-footer__about">
+          <div class="page-footer__logo logo logo--footer">
+            <picture>
+              <source srcset="img/logo-footer-1024@1x.png" media="(max-width: 1024px)">
+              <img src="img/logo-footer-desktop@1x.png" width="338" height="136" alt="Логотип сайта Техпром">
+            </picture>
+          </div>
+          <p>Компания ООО «ТЕХПРОМ» создана в 2013 году.
+            С&nbsp;2018&nbsp;г.&nbsp;компания&nbsp;специализируется на производстве специальных неорганических
+            материалов на основе
+            редкоземельных металлов, предназначенных для использования в лазерной технике, оптических приборах,
+            полиграфии.</p>
+          <p>Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых методом
+            твердофазного синтеза.
+            В&nbsp;своем арсенале компания имеет современное оборудование и технологии.</p>
+          <div class="page-footer__menu footer-menu footer-menu--main">
+            <ul>
+              <li><a href="#">
+                  <svg width="14" height="12">
+                    <use xlink:href="img/sprite.svg#icon-home"></use>
+                  </svg>Главная</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#" class="footer-menu__link footer-menu__link--current">Производство</a></li>
+              <li><a href="#">Продукция</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="page-footer__contacts contacts">
+          <h3>Контактная информация</h3>
+          <ul>
+            <li>
+              <svg width="10" height="16">
+                <use xlink:href="img/sprite.svg#icon-geo"></use>
+              </svg>г. Москва ул. Пречистенка дом 40/2 стр. 2</li>
+            <li class="contacts__item contacts__item--phone">
+              <svg width="24" height="24" class="contacts__icon contacts__icon--phone">
+                <use xlink:href="img/sprite.svg#icon-phone"></use>
+              </svg>+7&nbsp;(499)&nbsp;<span>707-07-69</span></li>
+            <li>
+              <svg width="14" height="14">
+                <use xlink:href="img/sprite.svg#icon-clock"></use>
+              </svg>пн-пт 08:00 до 18:00</li>
+            <li>
+              <svg width="14" height="11">
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
+              </svg>tehprom77@hotmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__copyright-paragraph">ООО «ТЕХПРОМ» © 2020 Все права защищены</p>
+        <p>Разработка высоконагруженных интернет проектов любой сложности Комплексное маркетинговое сопровождение
+          http://absolut&#8209;marketing.ru</p>
+      </div>
+    </footer>
+
   </div>
-</body></html>
+  <script src="js/accordion.js"></script>
+</body>
+
+</html>

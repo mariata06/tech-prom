@@ -1,0 +1,22 @@
+.menu {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-transform: uppercase;
+    color: $dark-blue;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+  }
+
+  .menu__link--current {
+    color: $green;
+  }
+}

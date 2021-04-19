@@ -1,0 +1,30 @@
+.container {
+  margin: 0 auto;
+  //flex-wrap: wrap;
+  //align-items: center;
+  //max-width: 1470px;
+  width: 1470px;
+
+  @media (max-width: 1280px) {
+    //max-width: 1184px;
+    width: 1184px;
+  }
+
+  @media (max-width: 1024px) {
+    //max-width: 944px;
+    width: 944px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    //max-width: 704px;
+    width: 704px;
+    //display: flex;
+    //flex-wrap: wrap;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    //display: flex;
+    //flex-wrap: wrap;
+    padding-bottom: 150px;
+  }
+}

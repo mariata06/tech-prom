@@ -1,0 +1,20 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 13px 15px;
+  align-items: center;
+
+  .copyright__copyright-paragraph {
+    @include reset;
+    @include text ($font-12, $height-12, $regular);
+    width: 142px;
+    text-align: left;
+  }
+
+  p {
+    @include reset;
+    @include text ($font-12, $height-12, $regular);
+    width: 391px;
+    text-align: right;
+  }
+}

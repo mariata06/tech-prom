@@ -4,8 +4,11 @@ $black: #000000; //цвет текста
 $medium-black: #000b1d; //цвет текста
 $grey: #666666;  //цвет текста
 $light-grey: #999999; //цвет текста
+$medium-grey: #cccccc;
 $white: #ffffff; //цвет текста
 $blue: #006db5; //цвет текста
+$dark-blue: #00276c;
+$light-pink: #f0e5e5;
 
 $max-tablet-width: 1024px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
 $min-tablet-width: 768px;
@@ -20,11 +23,16 @@ $retina-dppx: 1.5dppx;
 $font-12: 12px;
 $font-14: 14px;
 $font-16: 16px;
+$font-17: 17px;
 $font-18: 18px;
 $font-22: 22px;
+$font-24: 24px;
 $font-26: 26px;
+$font-28: 28px;
 $font-34: 34px;
 $font-26: 26px;
+$font-32: 32px;
+$font-36: 36px;
 $font-38: 38px;
 $font-45: 45px;
 
@@ -33,13 +41,21 @@ $medium: 500;
 $semi-bold: 600;
 $bold: 700;
 
+$height-12: 12px;
+$height-14: 14px;
 $height-16: 16px;
 $height-18: 18px;
+$height-19: 19px;
+$height-20: 20px;
 $height-21: 21px;
+$height-22: 22px;
 $height-23: 23px;
 $height-24: 24px;
+$height-26: 26px;
 $height-29: 29px;
+$height-32: 32px;
 $height-34: 34px;
+$height-36: 36px;
 $height-38: 38px;
 $height-44: 44px;
 $height-49: 49px;

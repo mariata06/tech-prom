@@ -1,0 +1,44 @@
+.page-footer {
+  min-height: 400px;
+  background-image: url("../img/footer-bg-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/footer-bg-desktop@2x.png");
+  }
+
+  @media (max-width: 1280px) {
+    background-image: url("../img/footer-bg-1280@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/footer-bg-1280@2x.png");
+    }
+  }
+}
+
+.page-footer__menu-wrapper {
+  background-color: $medium-black;
+}
+
+.page-footer__main-content {
+  padding-top: 41px;
+  padding-left: 16px;
+  padding-bottom: 89px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-footer__about {
+  p {
+    @include text ($font-16, $height-16, $regular);
+    color: $light-grey;
+    width: 620px;
+    padding-left: 45px;
+  }
+}
+
+.page-footer__contacts {
+  padding-top: 50px;
+  margin-right: 201px;
+}

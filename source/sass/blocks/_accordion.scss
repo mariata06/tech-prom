@@ -1,0 +1,67 @@
+.accordion {
+  .accordion__item-content {
+    @include list-reset;
+    display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    li {
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 10px;
+
+      &::before {
+        //content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        content: "";
+        position: absolute;
+        //color: $green; /* Change the color */
+        background-color: $green;
+        //font-weight: bold; /* If you want it to be bold */
+        //display: inline-block; /* Needed to add space between the bullet and the text */
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        //width: 20px; /* Also needed for space (tweak if needed) */
+        //margin-left: -9px; /* Also needed for space (tweak if needed) */
+      }
+    }
+  }
+
+  .accordion__item--active {
+    .accordion__item-content {
+      display: block;
+    }
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  .accordion__trigger {
+    @include text($font-16, $height-36, $bold);
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $blue;
+    border-bottom: 1px solid $light-pink;
+
+    svg {
+      margin-right: 13px;
+    }
+  }
+
+  a {
+    @include text($font-16, $height-22, $regular);
+    color: $blue;
+  }
+
+  .accordion__link--active {
+    color: $green;
+  }
+}

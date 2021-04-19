@@ -1,0 +1,77 @@
+.specialisation {
+  padding-bottom: 111px;
+
+  h2 {
+    @include reset;
+    @include title ($font-32, $height-32, $semi-bold, $black);
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  p {
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 37px;
+  }
+}
+
+.specialisation__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.specialisation__item {
+  padding: 22px;
+  width: 530px;
+  box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 38px;
+
+  picture {
+    float: right;
+  }
+
+  h3 {
+    @include reset;
+    @include title ($font-22, $height-22, $semi-bold, $blue);
+    width: 311px;
+    margin-bottom: 6px;
+  }
+
+  a {
+    display: flex;
+    width: 100%;
+  }
+
+  p {
+    font-weight: 600;
+    width: 322px;
+    text-align: left;
+    margin: 0;
+    color: $light-grey;
+  }
+
+  &--details {
+    h3 {
+      color: $black;
+    }
+
+    p {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: $blue;
+    }
+  }
+}
+
+.specialisation__item-image {
+  height: 160px;
+  border-radius: 5px;
+  overflow: hidden;
+}
