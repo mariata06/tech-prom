@@ -17,14 +17,14 @@
 
 <body>
   <div class="page-wrapper">
-    <header class="page-header container">
-      <nav class="page-header__navigation navigation">
+    <header class="page-header">
+      <nav class="page-header__navigation navigation container">
         <div class="navigation__logo logo logo--main logo--main--nojs">
           <picture>
             <source srcset="img/logo-tablet.png" media="(max-width: 768px)">
             <source srcset="img/logo-1024.png" media="(max-width: 1024px)">
-            <source srcset="img/logo-1280.png" media="(max-width: 1280px)">
-            <img src="img/logo-main.png" width="289" height="116" alt="Логотип сайта Техпром">
+            <source srcset="img/logo-1280.png" media="(max-width: 1279px)">
+            <img src="img/logo-main.png" alt="Логотип сайта Техпром">
           </picture>
         </div>
         <div class="navigation__logo logo logo--scroll logo--scroll--nojs">
@@ -35,7 +35,10 @@
           </a>
         </div>
         <ul class="navigation__menu menu">
-          <li><a href="#">Главная</a></li>
+          <li><a href="#">
+              <svg class="menu__icon menu__icon--home" width="14" height="12">
+                <use xlink:href="img/sprite.svg#icon-home"></use>
+              </svg>Главная</a></li>
           <li><a href="#">О компании</a></li>
           <li><a class="menu__link menu__link--current" href="#">Производство</a></li>
           <li><a href="#">Продукция</a></li>
@@ -188,7 +191,7 @@
             <!-- 1х: 728px; 2x: 1456px -->
             <source type="image/webp" srcset="img/materials-desktop@1x.webp 1x, img/materials-desktop@2x.webp 2x">
             <!-- 1х: 728px; 2x: 1456px -->
-            <img data-src="img/materials-desktop@1x.png" src="img/materials-desktop@1x.png" srcset="img/materials-desktop@2x.png 2x" alt="Производстве специальных неорганических материалов на основе редкоземельных металлов" width="728" height="350" loading="lazy" class="lazyload">
+            <img data-src="img/materials-desktop@1x.png" src="img/materials-desktop@1x.png" srcset="img/materials-desktop@2x.png 2x" alt="Производстве специальных неорганических материалов на основе редкоземельных металлов" loading="lazy" class="lazyload">
           </picture>
           <p>Производстве специальных неорганических материалов на основе редкоземельных металлов</p>
         </a>
@@ -206,9 +209,9 @@
               <!-- 1х: 356px; 2x: 167px -->
               <source type="image/webp" srcset="img/pigments-desktop@1x.webp 1x, img/pigments-desktop@2x.webp 2x">
               <!-- 1х: 356px; 2x: 167px -->
-              <img data-src="img/pigments-desktop@1x.png" src="img/pigments-desktop@1x.png" srcset="img/pigments-desktop@2x.png 2x" alt="Производство красителей и пигментов" width="356" height="167" loading="lazy" class="lazyload">
+              <img data-src="img/pigments-desktop@1x.png" src="img/pigments-desktop@1x.png" srcset="img/pigments-desktop@2x.png 2x" alt="Производство красителей и пигментов" loading="lazy" class="lazyload">
             </picture>
-            <p>Производство <span>красителей и пигментов</span></p>
+            <p>Производство <span>красителей&nbsp;и&nbsp;пигментов</span></p>
           </a>
           <a href="#" class="production__item">
             <picture>
@@ -223,19 +226,20 @@
               <!-- 1х: 356px; 2x: 167px -->
               <source type="image/webp" srcset="img/cemicals-desktop@1x.webp 1x, img/cemicals-desktop@2x.webp 2x">
               <!-- 1х: 356px; 2x: 167px -->
-              <img data-src="img/cemicals-desktop@1x.png" src="img/cemicals-desktop@1x.png" srcset="img/cemicals-desktop@2x.png 2x" alt="Производство прочих химических продуктов" width="356" height="167" loading="lazy" class="lazyload">
+              <img data-src="img/cemicals-desktop@1x.png" src="img/cemicals-desktop@1x.png" srcset="img/cemicals-desktop@2x.png 2x" alt="Производство прочих химических продуктов" loading="lazy" class="lazyload">
             </picture>
             <p>Производство <span>прочих&nbsp;химических продуктов</span></p>
           </a>
         </div>
         <div class="production__desc">
-          <h1>Производство специальных неорганических материалов</h1>
-          <p>Компания <span>ООО «ТЕХПРОМ»</span> создана в 2013 году. С 2018 г. компания специализируется на
-            производстве специальных неорганических материалов на основе редкоземельных металлов, предназначенных для
-            использования в лазерной технике, оптических приборах, полиграфии.</p>
+          <h1>Производство специальных&nbsp;неорганических&nbsp;материалов</h1>
+          <p>Компания <span>ООО «ТЕХПРОМ»</span> создана в 2013 году.<br>
+            С 2018 г. компания специализируется на производстве специальных неорганических материалов на основе
+            редкоземельных металлов, предназначенных для использования в лазерной технике, оптических приборах,
+            полиграфии.</p>
           <p>Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых методом
             твердофазного синтеза.</p>
-          <p>В своем арсенале компания имеет современное оборудование и технологии.
+          <p>В своем арсенале компания имеет современное оборудование и технологии.<br>
             Особенное внимание руководство компании уделяет экологическому менеджменту, и условиям труда сотрудников.
             Все производственные выбросы и отходы проходят тщательную нейтрализацию. Все сотрудники компании обеспечены
             в необходимом объеме специальной одеждой и средствами индивидуальной защиты.</p>
@@ -264,11 +268,11 @@
                   <!-- 1х: 139px; 2x: 276px -->
                   <source type="image/webp" media="(max-width: 1024px)" srcset="img/inorganics-1024@1x.webp 1x, img/inorganics-1024@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 259px -->
-                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/inorganics-1280@1x.webp 1x, img/inorganics-1280@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1919px)" srcset="img/inorganics-1280@1x.webp 1x, img/inorganics-1280@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <source type="image/webp" srcset="img/inorganics-desktop@1x.webp 1x, img/inorganics-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
-                  <img data-src="img/inorganics-desktop@1x.png" src="img/inorganics-desktop@1x.png" srcset="img/inorganics-desktop@2x.png 2x" alt="Специальные неорганические материалы" width="160" height="160" loading="lazy" class="lazyload">
+                  <img data-src="img/inorganics-desktop@1x.png" src="img/inorganics-desktop@1x.png" srcset="img/inorganics-desktop@2x.png 2x" alt="Специальные неорганические материалы" loading="lazy" class="lazyload">
                 </picture>
               </div>
             </a>
@@ -289,11 +293,11 @@
                   <!-- 1х: 139px; 2x: 276px -->
                   <source type="image/webp" media="(max-width: 1024px)" srcset="img/dyes-1024@1x.webp 1x, img/dyes-1024@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 259px -->
-                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/dyes-1280@1x.webp 1x, img/dyes-1280@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1919px)" srcset="img/dyes-1280@1x.webp 1x, img/dyes-1280@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <source type="image/webp" srcset="img/dyes-desktop@1x.webp 1x, img/dyes-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
-                  <img data-src="img/dyes-desktop@1x.png" src="img/dyes-desktop@1x.png" srcset="img/dyes-desktop@2x.png 2x" alt="Красители и пигменты" width="160" height="160" loading="lazy" class="lazyload">
+                  <img data-src="img/dyes-desktop@1x.png" src="img/dyes-desktop@1x.png" srcset="img/dyes-desktop@2x.png 2x" alt="Красители и пигменты" loading="lazy" class="lazyload">
                 </picture>
               </div>
             </a>
@@ -313,11 +317,11 @@
                   <!-- 1х: 139px; 2x: 276px -->
                   <source type="image/webp" media="(max-width: 1024px)" srcset="img/cemicals-products-1024@1x.webp 1x, img/cemicals-products-1024@2x.webp 2x">
                   <!-- 1х: 130px; 2x: 259px -->
-                  <source type="image/webp" media="(max-width: 1280px)" srcset="img/cemicals-products-1280@1x.webp 1x, img/cemicals-products-1280@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1919px)" srcset="img/cemicals-products-1280@1x.webp 1x, img/cemicals-products-1280@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <source type="image/webp" srcset="img/cemicals-products-desktop@1x.webp 1x, img/cemicals-products-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
-                  <img data-src="img/cemicals-products-desktop@1x.png" src="img/cemicals-products-desktop@1x.png" srcset="img/cemicals-products-desktop@2x.png 2x" alt="Прочие химические продукты" width="160" height="160" loading="lazy" class="lazyload">
+                  <img data-src="img/cemicals-products-desktop@1x.png" src="img/cemicals-products-desktop@1x.png" srcset="img/cemicals-products-desktop@2x.png 2x" alt="Прочие химические продукты" loading="lazy" class="lazyload">
                 </picture>
               </div>
             </a>
@@ -404,32 +408,20 @@
               <img src="img/logo-footer-desktop@1x.png" width="338" height="136" alt="Логотип сайта Техпром">
             </picture>
           </div>
-          <p>Компания ООО «ТЕХПРОМ» создана в 2013 году.
-            С&nbsp;2018&nbsp;г.&nbsp;компания&nbsp;специализируется на производстве специальных неорганических
-            материалов на основе
-            редкоземельных металлов, предназначенных для использования в лазерной технике, оптических приборах,
+          <p>Компания ООО «ТЕХПРОМ» создана в 2013 году.<br>
+            С 2018 г. компания специализируется на производстве специальных неорганических
+            материалов на основе редкоземельных металлов, предназначенных для использования в лазерной технике,
+            оптических приборах,
             полиграфии.</p>
           <p>Компания обладает полным циклом производства мелкодисперсных неорганических пигментов, получаемых методом
             твердофазного синтеза.
             В&nbsp;своем арсенале компания имеет современное оборудование и технологии.</p>
-          <div class="page-footer__menu footer-menu footer-menu--main">
-            <ul>
-              <li><a href="#">
-                  <svg width="14" height="12">
-                    <use xlink:href="img/sprite.svg#icon-home"></use>
-                  </svg>Главная</a></li>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#" class="footer-menu__link footer-menu__link--current">Производство</a></li>
-              <li><a href="#">Продукция</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </div>
         </div>
         <div class="page-footer__contacts contacts">
           <h3>Контактная информация</h3>
           <ul>
             <li>
-              <svg width="10" height="16">
+              <svg width="12" height="16">
                 <use xlink:href="img/sprite.svg#icon-geo"></use>
               </svg>г. Москва ул. Пречистенка дом 40/2 стр. 2</li>
             <li class="contacts__item contacts__item--phone">
@@ -444,6 +436,18 @@
               <svg width="14" height="11">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>tehprom77@hotmail.com</li>
+          </ul>
+        </div>
+        <div class="page-footer__menu footer-menu footer-menu--main">
+          <ul>
+            <li><a href="#">
+                <svg width="14" height="12">
+                  <use xlink:href="img/sprite.svg#icon-home"></use>
+                </svg>Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#" class="footer-menu__link footer-menu__link--current">Производство</a></li>
+            <li><a href="#">Продукция</a></li>
+            <li><a href="#">Контакты</a></li>
           </ul>
         </div>
       </div>

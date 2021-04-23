@@ -1,9 +1,40 @@
 .logo {
   &--scroll {
     display: none;
+
+    @media (max-width: 1024px) {
+      display: block;
+    }
+
+    img {
+      @media (max-width: 1024px) {
+        height: 60px;
+      }
+
+      @media (max-width: 768px) {
+        width: 123px;
+        height: 50px;
+      }
+    }
   }
 
   &--main {
     height: 116px;
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &--footer {
+    margin-left: 16px;
+
+    @media (max-width: 1280px) {
+      margin-left: 38px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
 }

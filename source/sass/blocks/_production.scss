@@ -5,6 +5,23 @@
   justify-content: space-between;
   min-width: 1100px;
   padding-bottom: 80px;
+
+  @media (max-width: 1440px) {
+    min-width: unset;
+    //justify-content: center;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 1280px) {
+    min-width: unset;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    //width: 100%;
+    //padding-left: 15px;
+    //padding-right: 15px;
+  }
 }
 
 .production__item {
@@ -21,12 +38,35 @@
     bottom: 0;
     left: 0;
     padding: 44px 177px 30px 32px;
+
+    @media (max-width: 1280px) {
+      @include text($font-22, $height-20, $semi-bold);
+      padding: 35px 101px 27px 26px;
+    }
   }
 }
 
 .production__item--materials {
   width: 728px;
   height: 350px;
+
+  @media (max-width: 1440px) {
+    width: unset;
+    height: 281px;
+    margin-right: 13px;
+  }
+
+  @media (max-width: 1280px) {
+    width: unset;
+    height: 281px;
+    margin-right: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: unset;
+    height: 224px;
+    margin-right: 0;
+  }
 }
 
 .production__wrapper {
@@ -35,16 +75,51 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: 1440px) {
+    width: 286px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 306px;
+  }
+
+  @media (max-width: 768px) {
+    width: 229px;
+  }
+
   .production__item {
     height: 167px;
+
+    @media (max-width: 1440px) {
+      width: unset;
+      height: 134px;
+    }
+
+    @media (max-width: 768px) {
+      width: unset;
+      height: 107px;
+    }
 
     p {
       @include text($font-24, $height-18, $bold);
       padding: 30px 104px 16px 20px;
+
+      @media (max-width: 1280px) {
+        @include text($font-18, $height-16, $bold);
+        padding: 24px 60px 14px 14px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
 
     span {
       font-size: 16px;
+
+      @media (max-width: 1280px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -56,15 +131,32 @@
 .production__desc {
   width: 976px;
 
+  @media (max-width: 1280px) {
+    width: 884px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 704px;
+  }
+
   h1 {
     @include title ($font-36, $height-36, $semi-bold, $black);
     margin-top: 40px;
+    width: 800px;
+
+    @media (max-width: 1280px) {
+      @include title ($font-32, $height-32, $semi-bold, $black);
+    }
   }
 
   p {
     @include text($font-17, $height-20, $regular);
     margin: 0;
     margin-bottom: 20px;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-16, $regular);
+    }
 
     span {
       font-weight: 600;
@@ -73,5 +165,9 @@
 
   a {
     color: $blue;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-16, $regular);
+    }
   }
 }

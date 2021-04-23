@@ -2,21 +2,52 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    padding-left: 15px;
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
 
   li {
     margin-right: 20px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    @media (max-width: 1024px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 8px;
+    }
   }
 
   a {
+    @include text ($font-14, $height-14, $semi-bold);
     text-transform: uppercase;
     color: $dark-blue;
-    font-size: 14px;
-    line-height: 14px;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1280px) {
+      @include text ($font-12, $height-12, $semi-bold);
+    }
+
+    @media (max-width: 768px) {
+      @include text ($font-10, $height-12, $semi-bold);
+    }
   }
 
   .menu__link--current {
     color: $green;
+  }
+
+  .menu__icon--home {
+    fill: $dark-blue;
+    margin-right: 17px;
   }
 }

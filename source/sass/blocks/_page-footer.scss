@@ -23,22 +23,71 @@
 
 .page-footer__main-content {
   padding-top: 41px;
-  padding-left: 16px;
-  padding-bottom: 89px;
+  //padding-left: 16px;
+  padding-bottom: 63px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: 1280px) {
+    justify-content: flex-start;
+  }
 }
 
 .page-footer__about {
+  @media (max-width: 1440px) {
+    margin-right: 200px;
+  }
+
+  @media (max-width: 1280px) {
+    margin-right: 116px;
+  }
+
+  @media (max-width: 1024px) {
+    margin-right: 18px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 21px;
+  }
+
   p {
     @include text ($font-16, $height-16, $regular);
     color: $light-grey;
-    width: 620px;
-    padding-left: 45px;
+    width: 600px;
+    margin-left: 61px;
+
+    @media (max-width: 1280px) {
+      font-size: 14px;
+      margin-left: 88px;
+      width: 584px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 504px;
+    }
+
+    @media (max-width: 768px) {
+      @include text ($font-12, $height-14, $regular);
+      width: 313px;
+      margin-left: 40px;
+    }
   }
 }
 
 .page-footer__contacts {
   padding-top: 50px;
   margin-right: 201px;
+
+  @media (max-width: 1440px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1280px) {
+    margin-right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding-top: 100px;
+  }
 }

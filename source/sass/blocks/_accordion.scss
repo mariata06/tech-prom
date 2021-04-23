@@ -11,13 +11,9 @@
       margin-bottom: 10px;
 
       &::before {
-        //content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
         content: "";
         position: absolute;
-        //color: $green; /* Change the color */
         background-color: $green;
-        //font-weight: bold; /* If you want it to be bold */
-        //display: inline-block; /* Needed to add space between the bullet and the text */
         display: block;
         width: 8px;
         height: 8px;
@@ -25,8 +21,6 @@
         left: 10px;
         top: 50%;
         transform: translateY(-50%);
-        //width: 20px; /* Also needed for space (tweak if needed) */
-        //margin-left: -9px; /* Also needed for space (tweak if needed) */
       }
     }
   }
@@ -54,11 +48,19 @@
     svg {
       margin-right: 13px;
     }
+
+    @media (max-width: 1280px) {
+      @include text($font-15, $height-36, $bold);
+    }
   }
 
   a {
     @include text($font-16, $height-22, $regular);
     color: $blue;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-20, $regular);
+    }
   }
 
   .accordion__link--active {

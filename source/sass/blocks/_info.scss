@@ -1,3 +1,16 @@
 .info {
   grid-area: information;
+  padding-left: 39px;
+
+  @media (max-width: 1280px) {
+    padding-left: 38px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  h3 {
+    @include title ($font-18, $height-18, $bold, $black);
+  }
 }

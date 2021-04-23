@@ -1,8 +1,33 @@
 .navigation {
+  margin: 0;
+  margin-left: 186px;
+  margin-right: 224px;
+  width: 1510px;
   display: grid;
-  grid-template-columns: 372px 6fr 3fr;
+  grid-template-columns: 410px 6fr 3fr;
   grid-template-areas: "logo menu contacts";
   align-items: center;
+
+  @media (max-width: 1440px) {
+    grid-template-columns: 410px 6fr 3fr;
+    //margin: 0;
+    //margin-left: 50px;
+    //margin-right: 70px;
+    width: 1300px;
+    //padding-right: 50px;
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 338px 594px 290px;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 148px 472px 343px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 136px 383px 200px;
+  }
 }
 
 .navigation__logo {
@@ -19,22 +44,26 @@
   display: flex;
 
   span {
+    @include text ($font-14, $height-17, $regular);
     color: $blue;
-    font-size: 14px;
-    line-height: 17px;
-    font-weight: 400;
   }
 
   a {
+    @include text ($font-30, $height-37, $bold);
     width: 241px;
     color: $dark-blue;
-    font-size: 30px;
-    line-height: 36.5px;
-    font-weight: 700;
     display: flex;
     align-items: baseline;
     flex-wrap: wrap;
     justify-content: flex-end;
+
+    @media (max-width: 1280px) {
+      @include text ($font-28, $height-34, $bold);
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }
 
@@ -42,7 +71,23 @@
   margin-right: 20px;
 }
 
+.navigation__icon--home {
+  margin-right: 17px;
+
+  @media (max-width: 1280px) {
+    margin-right: 10px;
+  }
+}
+
 .navigation__burger-menu {
   margin-left: 16px;
   align-self: baseline;
+
+  svg {
+    fill: $green;
+
+    @media (max-width: 768px) {
+      fill: $orange;
+    }
+  }
 }

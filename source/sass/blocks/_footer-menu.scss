@@ -8,7 +8,15 @@
 
   &--main {
     margin-top: 63px;
-    padding-left: 45px;
+    margin-left: 61px;
+
+    @media (max-width: 1280px) {
+      margin-left: 88px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 40px;
+    }
 
     ul {
       @include list-reset;
@@ -23,6 +31,10 @@
     a {
       @include text ($font-14, $height-14, $semi-bold);
       color: $medium-grey;
+
+      @media (max-width: 768px) {
+        @include text ($font-10, $height-12, $semi-bold);
+      }
     }
 
     .footer-menu__link {
@@ -33,6 +45,7 @@
 
     svg {
       margin-right: 16px;
+      fill: $green;
     }
   }
 }
@@ -40,6 +53,14 @@
 .footer-menu__phones {
   display: flex;
   align-items: center;
+
+  @media (max-width: 1280px) {
+    margin-left: 38px;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 
   a {
     @include text ($font-16, $height-19, $semi-bold);
@@ -68,6 +89,10 @@
 .footer-menu__social {
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   ul {
     @include list-reset;

@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: 16px 13px 15px;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 
   .copyright__copyright-paragraph {
     @include reset;

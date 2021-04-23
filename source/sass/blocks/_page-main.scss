@@ -1,8 +1,41 @@
 .page-main {
   display: grid;
-  grid-template-columns: 3fr 9fr;
+  grid-template-columns: 394px 1099px;
   column-gap: 16px;
   grid-template-areas: "information production"
     "information ."
     ". specialisation";
+
+  @media (max-width: 1440px) {
+    grid-template-columns: 344px 922px;
+    column-gap: 16px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 322px 884px;
+    column-gap: 16px;
+    padding: 0;
+    //margin-left: 10;
+    //margin-right: 48px;
+  }
+
+  @media (max-width: 1024px) {
+    //padding-left: 19px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "production"
+      "specialisation";
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    //padding-left: 19px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "production"
+      "specialisation";
+    //padding-left: 20px;
+    padding-right: 20px;
+  }
 }

@@ -1,11 +1,20 @@
 .specialisation {
   padding-bottom: 111px;
 
+  @media (max-width: 768px) {
+    //padding-left: 15px;
+    //padding-right: 15px;
+  }
+
   h2 {
     @include reset;
     @include title ($font-32, $height-32, $semi-bold, $black);
     text-align: center;
     margin-bottom: 6px;
+
+    @media (max-width: 1280px) {
+      @include title ($font-28, $height-28, $semi-bold, $black);
+    }
   }
 
   p {
@@ -14,6 +23,11 @@
     margin: 0 auto;
     text-align: center;
     margin-bottom: 37px;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-16, $semi-bold);
+      width: 600px;
+    }
   }
 }
 
@@ -30,19 +44,44 @@
   border-radius: 10px;
   margin-bottom: 38px;
 
+  @media (max-width: 1440px) {
+    width: 426px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 455px;
+  }
+
+  @media (max-width: 768px) {
+    width: 339px;
+    padding: 14px;
+  }
+
+  /*
   picture {
     float: right;
-  }
+  }*/
 
   h3 {
     @include reset;
     @include title ($font-22, $height-22, $semi-bold, $blue);
     width: 311px;
     margin-bottom: 6px;
+
+    @media (max-width: 1440px) {
+      @include title ($font-18, $height-18, $semi-bold, $blue);
+      width: 220px;
+    }
+
+    @media (max-width: 768px) {
+      @include title ($font-14, $height-14, $semi-bold, $blue);
+      width: 200px;
+    }
   }
 
   a {
     display: flex;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -52,6 +91,16 @@
     text-align: left;
     margin: 0;
     color: $light-grey;
+
+    @media (max-width: 1440px) {
+      @include text($font-14, $height-16, $semi-bold);
+      width: 230px;
+    }
+
+    @media (max-width: 768px) {
+      @include text($font-12, $height-12, $semi-bold);
+      width: 205px;
+    }
   }
 
   &--details {
@@ -66,6 +115,10 @@
 
     a {
       color: $blue;
+
+      @media (max-width: 768px) {
+        @include text($font-12, $height-12, $regular);
+      }
     }
   }
 }
@@ -74,4 +127,14 @@
   height: 160px;
   border-radius: 5px;
   overflow: hidden;
+
+  @media (max-width: 1440px) {
+    height: 130px;
+    width: 130px;
+  }
+
+  @media (max-width: 768px) {
+    height: 102px;
+    width: 102px;
+  }
 }

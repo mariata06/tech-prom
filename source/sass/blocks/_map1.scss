@@ -4,14 +4,16 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     background-image: url("../img/map-desktop@2x.png");
   }
 
   @media (max-width: 1280px) {
     background-image: url("../img/map-1280@1x.png");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/map-1280@2x.png");
     }
   }
@@ -19,16 +21,18 @@
   @media (max-width: 1024px) {
     background-image: url("../img/map-1024@1x.png");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/map-1024@2x.png");
     }
   }
 
   @media (max-width: 768px) {
     background-image: url("../img/map-tablet@1x.png");
-    //background-size: 70%;
+    //background-size: ;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
       background-image: url("../img/map-tablet@2x.png");
     }
   }
@@ -45,7 +49,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     background-image: url("../img/address-desktop@2x.png");
   }
 
