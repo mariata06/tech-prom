@@ -26,10 +26,18 @@
 
   @media (max-width: 768px) {
     background-image: url("../img/map-tablet@1x.png");
-    //background-size: 70%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/map-mobile@1x.png");
+    background-position: center center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-mobile@2x.png");
     }
   }
 }
@@ -56,6 +64,11 @@
 
   @media (max-width: 1280px) {
     margin-left: 60px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+    background-image: none;
   }
 }
 

@@ -5,11 +5,21 @@
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 
+  @media (max-width: $max-mobile-width) {
+    flex-wrap: wrap;
+  }
+
   .copyright__copyright-paragraph {
     @include reset;
     @include text ($font-12, $height-12, $regular);
     width: 142px;
     text-align: left;
+
+    @media (max-width: $max-mobile-width) {
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
 
   p {
@@ -17,5 +27,10 @@
     @include text ($font-12, $height-12, $regular);
     width: 391px;
     text-align: right;
+
+    @media (max-width: $max-mobile-width) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }

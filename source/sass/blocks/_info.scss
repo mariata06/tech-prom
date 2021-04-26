@@ -2,8 +2,12 @@
   grid-area: information;
   padding-left: 39px;
 
-  @media (max-width: 1280px) {
-    padding-left: 38px;
+  @media (max-width: 1440px) {
+    padding-left: 0;
+  }
+
+  @media (max-width: 1440px) {
+    padding-left: 39px;
   }
 
   @media (max-width: 1024px) {

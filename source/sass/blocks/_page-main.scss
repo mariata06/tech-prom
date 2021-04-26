@@ -1,41 +1,42 @@
 .page-main {
   display: grid;
-  grid-template-columns: 394px 1099px;
-  column-gap: 16px;
+  grid-template-columns: 23% 73%;
+  column-gap: 4%;
   grid-template-areas: "information production"
     "information ."
     ". specialisation";
 
   @media (max-width: 1440px) {
-    grid-template-columns: 344px 922px;
-    column-gap: 16px;
-    padding-left: 50px;
+    grid-template-columns: 23% 76%;
+    column-gap: 1%;
+    padding-left: 40px;
     padding-right: 50px;
   }
 
   @media (max-width: 1280px) {
-    grid-template-columns: 322px 884px;
-    column-gap: 16px;
+    grid-template-columns: 26% 73%;
+    column-gap: 1%;
     padding: 0;
-    //margin-left: 10;
-    //margin-right: 48px;
+    padding-right: 38px;
   }
 
   @media (max-width: 1024px) {
-    //padding-left: 19px;
-    grid-template-columns: 1fr;
-    grid-template-areas: "production"
-      "specialisation";
     padding-left: 20px;
     padding-right: 20px;
+    display: block;
+    grid-template-columns: none;
   }
 
   @media (max-width: 768px) {
-    //padding-left: 19px;
     grid-template-columns: 1fr;
     grid-template-areas: "production"
       "specialisation";
-    //padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    display: block;
+    grid-template-columns: none;
   }
 }

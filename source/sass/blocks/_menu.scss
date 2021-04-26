@@ -1,5 +1,6 @@
 .menu {
   @include list-reset;
+  grid-area: menu;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -12,10 +13,18 @@
     padding-left: 0;
   }
 
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+
   li {
     margin-right: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+
+    @media (max-width: 1280px) {
+      margin-right: 15px;
+    }
 
     @media (max-width: 1024px) {
       margin-right: 10px;

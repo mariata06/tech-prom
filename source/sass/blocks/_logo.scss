@@ -1,9 +1,16 @@
 .logo {
+  grid-area: logo;
+
   &--scroll {
     display: none;
 
     @media (max-width: 1024px) {
       display: block;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 99px;
+      height: 40px;
     }
 
     img {
@@ -14,6 +21,11 @@
       @media (max-width: 768px) {
         width: 123px;
         height: 50px;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        width: 99px;
+        height: 40px;
       }
     }
   }
@@ -35,6 +47,13 @@
 
     @media (max-width: 768px) {
       margin-left: 0;
+    }
+
+    img {
+      @media (max-width: 1024px) {
+        width: 250px;
+        height: 100px;
+      }
     }
   }
 }

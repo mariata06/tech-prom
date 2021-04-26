@@ -1,11 +1,6 @@
 .specialisation {
   padding-bottom: 111px;
 
-  @media (max-width: 768px) {
-    //padding-left: 15px;
-    //padding-right: 15px;
-  }
-
   h2 {
     @include reset;
     @include title ($font-32, $height-32, $semi-bold, $black);
@@ -17,7 +12,7 @@
     }
   }
 
-  p {
+  .specialisation__paragraph {
     width: 800px;
     display: block;
     margin: 0 auto;
@@ -27,6 +22,11 @@
     @media (max-width: 1280px) {
       @include text($font-14, $height-16, $semi-bold);
       width: 600px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text($font-13, $height-15, $semi-bold);
+      width: 100%;
     }
   }
 }
@@ -39,43 +39,36 @@
 
 .specialisation__item {
   padding: 22px;
-  width: 530px;
+  width: 48%;
   box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 38px;
-
-  @media (max-width: 1440px) {
-    width: 426px;
-  }
-
-  @media (max-width: 1024px) {
-    width: 455px;
-  }
 
   @media (max-width: 768px) {
     width: 339px;
     padding: 14px;
   }
 
-  /*
-  picture {
-    float: right;
-  }*/
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    padding: 12px;
+  }
 
   h3 {
     @include reset;
     @include title ($font-22, $height-22, $semi-bold, $blue);
-    width: 311px;
     margin-bottom: 6px;
 
     @media (max-width: 1440px) {
       @include title ($font-18, $height-18, $semi-bold, $blue);
-      width: 220px;
     }
 
     @media (max-width: 768px) {
       @include title ($font-14, $height-14, $semi-bold, $blue);
-      width: 200px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-12, $height-12, $semi-bold, $blue);
     }
   }
 
@@ -87,19 +80,16 @@
 
   p {
     font-weight: 600;
-    width: 322px;
     text-align: left;
     margin: 0;
     color: $light-grey;
 
     @media (max-width: 1440px) {
       @include text($font-14, $height-16, $semi-bold);
-      width: 230px;
     }
 
     @media (max-width: 768px) {
       @include text($font-12, $height-12, $semi-bold);
-      width: 205px;
     }
   }
 
@@ -127,14 +117,33 @@
   height: 160px;
   border-radius: 5px;
   overflow: hidden;
+  margin-left: 10px;
+
+  img {
+    border-radius: 5px;
+  }
 
   @media (max-width: 1440px) {
     height: 130px;
     width: 130px;
   }
 
+  @media (max-width: 1024px) {
+    height: 137px;
+    width: 137px;
+  }
+
   @media (max-width: 768px) {
     height: 102px;
     width: 102px;
   }
+
+  @media (max-width: $max-mobile-width) {
+    height: 87px;
+    width: 87px;
+  }
+}
+
+.specialisation__item-text {
+  width: 65%;
 }

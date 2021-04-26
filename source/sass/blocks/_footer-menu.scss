@@ -4,6 +4,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     justify-content: space-between;
+
+    @media (max-width: $max-mobile-width) {
+      display: none;
+    }
   }
 
   &--main {
@@ -16,6 +20,10 @@
 
     @media (max-width: 768px) {
       margin-left: 40px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      display: none;
     }
 
     ul {

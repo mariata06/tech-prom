@@ -1,37 +1,28 @@
 .container {
   margin: 0 auto;
-  width: 1548px;
+  max-width: 1548px;
   padding-right: 38px;
 
   @media (max-width: 1440px) {
-    width: 1400px;
+    max-width: 1400px;
   }
 
   @media (max-width: 1280px) {
-    width: 1260px;
-    //margin: 0;
-    //margin-left: 10;
-    //margin-right: 48px;
-    //padding-left: 10px;
-    //padding-right: 48px;
+    max-width: 1260px;
   }
 
   @media (max-width: 1024px) {
-    //margin: 0;
-    width: 984px;
+    max-width: 984px;
     padding-right: 19px;
-    //margin-left: 21;
-    //margin-right: 40px;
-    //padding-left: 21px;
-    //padding-right: 40px;
   }
 
   @media (max-width: $min-tablet-width) {
-    width: 734px;
+    max-width: 734px;
     padding-right: 15px;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-bottom: 150px;
+    width: 100%;
+    padding-right: 0;
   }
 }

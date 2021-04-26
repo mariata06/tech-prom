@@ -23,7 +23,6 @@
 
 .page-footer__main-content {
   padding-top: 41px;
-  //padding-left: 16px;
   padding-bottom: 63px;
   display: flex;
   flex-wrap: wrap;
@@ -45,10 +44,16 @@
 
   @media (max-width: 1024px) {
     margin-right: 18px;
+    width: 60%;
   }
 
   @media (max-width: 768px) {
     margin-right: 21px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-right: 0;
+    width: 100%;
   }
 
   p {
@@ -64,13 +69,22 @@
     }
 
     @media (max-width: 1024px) {
-      width: 504px;
+      //width: 504px;
+      width: 60%;
+      margin-left: 70px;
     }
 
     @media (max-width: 768px) {
       @include text ($font-12, $height-14, $regular);
       width: 313px;
       margin-left: 40px;
+    }
+
+    @media (max-width: $min-mobile-width) {
+      margin-left: 0;
+      padding-left: 15px;
+      padding-right: 16px;
+      width: 100%;
     }
   }
 }
@@ -89,5 +103,10 @@
 
   @media (max-width: 1024px) {
     padding-top: 100px;
+    width: 37%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 36px;
   }
 }

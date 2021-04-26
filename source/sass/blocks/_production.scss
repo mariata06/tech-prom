@@ -8,7 +8,6 @@
 
   @media (max-width: 1440px) {
     min-width: unset;
-    //justify-content: center;
     justify-content: flex-start;
   }
 
@@ -18,9 +17,12 @@
   }
 
   @media (max-width: 768px) {
-    //width: 100%;
-    //padding-left: 15px;
-    //padding-right: 15px;
+    width: 100%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    grid-area: unset;
+    justify-content: flex-start;
   }
 }
 
@@ -43,6 +45,11 @@
       @include text($font-22, $height-20, $semi-bold);
       padding: 35px 101px 27px 26px;
     }
+
+    @media (max-width: $max-mobile-width) {
+      @include text($font-12, $height-12, $semi-bold);
+      padding: 13px 40px 11px 11px;
+    }
   }
 }
 
@@ -51,21 +58,33 @@
   height: 350px;
 
   @media (max-width: 1440px) {
-    width: unset;
+    width: 585px;
     height: 281px;
     margin-right: 13px;
+
+    img {
+      width: 100%;
+    }
   }
 
   @media (max-width: 1280px) {
-    width: unset;
-    height: 281px;
     margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 624px;
+    margin-right: 16px;
   }
 
   @media (max-width: 768px) {
-    width: unset;
+    width: 466px;
     height: 224px;
     margin-right: 0;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 138px;
   }
 }
 
@@ -87,17 +106,34 @@
     width: 229px;
   }
 
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+
   .production__item {
     height: 167px;
+    width: 356px;
 
     @media (max-width: 1440px) {
       width: unset;
       height: 134px;
     }
 
+    @media (max-width: 1280px) {
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 306px;
+    }
+
     @media (max-width: 768px) {
       width: unset;
       height: 107px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      display: none;
     }
 
     p {
@@ -136,7 +172,15 @@
   }
 
   @media (max-width: 1024px) {
-    width: 704px;
+    width: 864px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 20px;
   }
 
   h1 {
@@ -146,6 +190,13 @@
 
     @media (max-width: 1280px) {
       @include title ($font-32, $height-32, $semi-bold, $black);
+      width: 100%;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-20, $height-20, $semi-bold, $black);
+      margin: 0;
+      margin-bottom: 6px;
     }
   }
 
@@ -156,6 +207,12 @@
 
     @media (max-width: 1280px) {
       @include text($font-14, $height-16, $regular);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text ($font-13, $height-16, $regular);
+      margin: 0;
+      margin-bottom: 16px;
     }
 
     span {
