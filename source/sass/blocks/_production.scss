@@ -1,3 +1,4 @@
+/*
 .production {
   grid-area: production;
   display: flex;
@@ -187,6 +188,171 @@
     @include title ($font-36, $height-36, $semi-bold, $black);
     margin-top: 40px;
     width: 800px;
+
+    @media (max-width: 1280px) {
+      @include title ($font-32, $height-32, $semi-bold, $black);
+      width: 100%;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-20, $height-20, $semi-bold, $black);
+      margin: 0;
+      margin-bottom: 6px;
+    }
+  }
+
+  p {
+    @include text($font-17, $height-20, $regular);
+    margin: 0;
+    margin-bottom: 20px;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-16, $regular);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text ($font-13, $height-16, $regular);
+      margin: 0;
+      margin-bottom: 16px;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  a {
+    color: $blue;
+
+    @media (max-width: 1280px) {
+      @include text($font-14, $height-16, $regular);
+    }
+  }
+}
+*/
+
+.production {
+  grid-area: production;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  grid-template-rows: auto;
+  column-gap: 16px;
+  row-gap: 16px;
+  padding-bottom: 80px;
+
+  img {
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+  }
+}
+
+.production__item--materials {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  @media (max-width: $max-mobile-width) {
+    grid-column: 1 / 3;
+  }
+}
+
+.production__item {
+  figure {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+  }
+
+  figcaption {
+    @include text($font-28, $height-26, $semi-bold);
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    margin: 0;
+    color: $white;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 44px 177px 30px 32px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @media (max-width: 1280px) {
+      @include text($font-22, $height-20, $semi-bold);
+      padding: 35px 101px 27px 26px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include text($font-12, $height-12, $semi-bold);
+      padding: 13px 40px 11px 11px;
+    }
+  }
+}
+
+.production__wrapper {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+
+  .production__item {
+    figcaption {
+      @include text($font-24, $height-18, $bold);
+      padding: 30px 104px 16px 20px;
+
+      @media (max-width: 1280px) {
+        @include text($font-18, $height-16, $bold);
+        padding: 24px 60px 14px 14px;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      span {
+        font-size: 16px;
+
+        @media (max-width: 1280px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.production__desc {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  padding-right: 124px;
+
+  @media (max-width: 1280px) {
+    padding-right: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding-right: 80px;
+  }
+
+  @media (max-width: 768px) {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 20px;
+  }
+
+  h1 {
+    @include title ($font-36, $height-36, $semi-bold, $black);
+    margin-top: 40px;
+    //width: 800px;
 
     @media (max-width: 1280px) {
       @include title ($font-32, $height-32, $semi-bold, $black);

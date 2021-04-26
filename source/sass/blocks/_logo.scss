@@ -4,8 +4,29 @@
   &--scroll {
     display: none;
 
+    /*
     @media (max-width: 1024px) {
       display: block;
+    }*/
+  }
+
+  &--main {
+    width: 289px;
+    height: 116px;
+
+    /*
+    @media (max-width: 1024px) {
+      display: none;
+    }*/
+
+    @media (max-width: 1024px) {
+      width: 148px;
+      height: 60px;
+    }
+
+    @media (max-width: 768px) {
+      width: 123px;
+      height: 50px;
     }
 
     @media (max-width: $max-mobile-width) {
@@ -27,14 +48,6 @@
         width: 99px;
         height: 40px;
       }
-    }
-  }
-
-  &--main {
-    height: 116px;
-
-    @media (max-width: 1024px) {
-      display: none;
     }
   }
 
