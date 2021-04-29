@@ -9,16 +9,15 @@
 
   @media (max-width: 1280px) {
     max-width: 1260px;
+    padding-right: 0;
   }
 
   @media (max-width: 1024px) {
     max-width: 984px;
-    padding-right: 19px;
   }
 
   @media (max-width: $min-tablet-width) {
     max-width: 734px;
-    padding-right: 15px;
   }
 
   @media (max-width: $max-mobile-width) {

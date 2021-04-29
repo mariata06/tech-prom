@@ -35,6 +35,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .specialisation__item {
@@ -50,8 +54,25 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 100%;
+    width: 50%;
     padding: 12px;
+    margin: 0 auto 24px;
+  }
+
+  @media (max-width: 600px) {
+    width: 65%;
+  }
+
+  @media (max-width: 500px) {
+    width: 75%;
+  }
+
+  @media (max-width: 400px) {
+    width: 90%;
+  }
+
+  @media (max-width: $min-mobile-width) {
+    width: 100%;
   }
 
   h3 {

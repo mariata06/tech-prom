@@ -22,3 +22,21 @@ accordionTriggers.forEach(function (trigger) {
     }
   });
 });
+
+// Липкое меню навигации при скролле страницы
+window.onscroll = function showHeader() {
+
+  var header = document.querySelector(".page-header");
+  var logoMain = document.querySelector(".logo--main");
+  var logoScroll = document.querySelector(".logo--scroll");
+
+  if(window.pageYOffset > 200) {
+    header.classList.add("page-header--fixed");
+    logoMain.classList.add("logo--main--hide");
+    logoScroll.classList.add("logo--scroll--show");
+  } else {
+    header.classList.remove("page-header--fixed");
+    logoMain.classList.remove("logo--main--hide");
+    logoScroll.classList.remove("logo--scroll--show");
+  }
+};

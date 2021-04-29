@@ -6,22 +6,18 @@
   align-items: center;
 
   @media (max-width: 1440px) {
-    grid-template-columns: 410px 6fr 3fr;
+    grid-template-columns: 357px 6fr 3fr;
   }
 
   @media (max-width: 1280px) {
-    //grid-template-columns: 338px 594px 290px;
     grid-template-columns: 27% 47% 26%;
   }
 
   @media (max-width: 1024px) {
-    //grid-template-columns: 148px 472px 343px;
-    //grid-template-columns: 15% 49% 36%;
     grid-template-columns: 148px 59% 26%;
   }
 
   @media (max-width: 768px) {
-    //grid-template-columns: 136px 383px 200px;
     grid-template-columns: 19% 53% 28%;
   }
 
@@ -39,6 +35,11 @@
   span {
     @include text ($font-14, $height-17, $regular);
     color: $blue;
+    padding-bottom: 1px;
+
+    &:last-of-type {
+      border-bottom: 1px solid $blue;
+    }
   }
 
   a {
@@ -87,6 +88,7 @@
 .navigation__burger-menu {
   margin-left: 16px;
   align-self: baseline;
+  margin-top: 5px;
 
   svg {
     fill: $green;
