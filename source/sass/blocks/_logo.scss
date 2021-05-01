@@ -1,9 +1,6 @@
 .logo {
-  grid-area: logo;
-
   &--scroll {
     display: none;
-    height: 81px;
 
     @media (max-width: 1024px) {
       width: 148px;
@@ -20,35 +17,12 @@
       height: 40px;
     }
 
-    img {
-      width: 200px;
-      height: 81px;
-
-      @media (max-width: 1024px) {
-        width: 148px;
-        height: 60px;
-      }
-
-      @media (max-width: 768px) {
-        width: 123px;
-        height: 50px;
-      }
-
-      @media (max-width: $max-mobile-width) {
-        width: 99px;
-        height: 40px;
-      }
-    }
-
     &--show {
       display: block;
     }
   }
 
   &--main {
-    width: 289px;
-    height: 116px;
-
     &--hide {
       display: none;
     }
@@ -66,22 +40,6 @@
     @media (max-width: $max-mobile-width) {
       width: 99px;
       height: 40px;
-    }
-
-    img {
-      @media (max-width: 1024px) {
-        height: 60px;
-      }
-
-      @media (max-width: 768px) {
-        width: 123px;
-        height: 50px;
-      }
-
-      @media (max-width: $max-mobile-width) {
-        width: 99px;
-        height: 40px;
-      }
     }
   }
 

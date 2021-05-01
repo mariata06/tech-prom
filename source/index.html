@@ -11,7 +11,7 @@
   <link rel="preload" href="fonts/proximanova-bold.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="fonts/proximanova-regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="css/style.min.css" as="style" />
-  <!--<link rel="preload" href="js/main.js" as="script" />-->
+  <link rel="preload" href="js/main.js" as="script" />
   <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -19,18 +19,11 @@
   <div class="page-wrapper">
     <header class="page-header">
       <nav class="page-header__navigation navigation container">
-        <div class="navigation__logo logo logo--main logo--main--nojs">
-          <picture>
-            <source srcset="img/logo-mobile.png" media="(max-width: 767px)">
-            <source srcset="img/logo-tablet.png" media="(max-width: 1023px)">
-            <source srcset="img/logo-1024.png" media="(max-width: 1279px)">
-            <img src="img/logo-main.png" width="289" height="116" alt="Логотип сайта Техпром">
-          </picture>
-        </div>
-        <div class="navigation__logo logo logo--scroll logo--scroll--nojs">
-          <picture>
-            <img src="img/logo-scroll.png" width="200" height="81" alt="Логотип сайта Техпром">
-          </picture>
+        <div class="navigation__logo">
+          <img class="logo logo--main lazyload" data-src="img/logo-main@1x.png" src="img/logo-main@1x.png"
+            srcset="img/logo-main@2x.png 2x" loading="lazy" width="289" height="116" alt="Логотип сайта Техпром">
+          <img class="logo logo--scroll lazyload" data-src="img/logo-scroll@1x.png" src="img/logo-scroll@1x.png"
+            srcset="img/logo-scroll@2x.png 2x" loading="lazy" width="200" height="81" alt="Логотип сайта Техпром">
         </div>
         <ul class="navigation__menu menu">
           <li><a href="#">
@@ -53,13 +46,18 @@
               <use xlink:href="img/sprite.svg#icon-burger"></use>
             </svg>
           </button>
+          <button class="navigation__close button">
+            <svg width="15" height="15">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
         </div>
       </nav>
     </header>
 
     <main class="page-main container">
       <section class="info">
-        <div class="info__products products products__wrapper">
+        <div class="info__products products">
           <h3>Производство</h3>
           <div class="products__accordion accordion">
             <div class="accordion__item">
@@ -100,9 +98,9 @@
           </div>
         </div>
 
-        <div class="info__about about about__wrapper">
+        <div class="info__about about">
           <h3>Информационный раздел</h3>
-          <div class="products__accordion accordion">
+          <div class="about__accordion accordion">
             <div class="accordion__item accordion__item--active">
               <button class="accordion__trigger button" rel="tab1" aria-label="О компании">
                 <svg class="accordion__item-svg" width="6" height="10">
@@ -179,49 +177,28 @@
         <a href="#" class="production__item production__item--materials">
           <figure>
             <picture>
-              <!-- 1х: 466px; 2x: 932px -->
-              <!--<source type="image/webp" media="(max-width: 767px)"
-                srcset="img/materials-mobile@1x.webp 1x, img/materials-mobile@2x.webp 2x">-->
-              <!-- 1х: 625px; 2x: 1250px -->
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                srcset="img/materials-tablet@1x.webp 1x, img/materials-tablet@2x.webp 2x">-->
-              <!-- 1х: 585px; 2x: 1170px -->
-              <!--<source type="image/webp" media="(max-width: 1279px)"
-                srcset="img/materials-1024@1x.webp 1x, img/materials-1024@2x.webp 2x">-->
-              <!-- 1х: 585px; 2x: 1170px -->
-              <!--<source type="image/webp" media="(max-width: 1439px)"
-                srcset="img/materials-1280@1x.webp 1x, img/materials-1280@2x.webp 2x">-->
               <!-- 1х: 728px; 2x: 1456px -->
               <source type="image/webp" srcset="img/materials-desktop@1x.webp 1x, img/materials-desktop@2x.webp 2x">
               <!-- 1х: 728px; 2x: 1456px -->
               <img data-src="img/materials-desktop@1x.png" src="img/materials-desktop@1x.png"
-                srcset="img/materials-desktop@2x.png 2x" alt="Производстве специальных неорганических материалов на основе редкоземельных металлов" loading="lazy"
-                class="lazyload">
+                srcset="img/materials-desktop@2x.png 2x"
+                alt="Производстве специальных неорганических материалов на основе редкоземельных металлов"
+                loading="lazy" class="lazyload">
             </picture>
-            <figcaption>Производстве специальных неорганических материалов на основе редкоземельных металлов</figcaption>
+            <figcaption>Производстве специальных неорганических материалов на основе редкоземельных металлов
+            </figcaption>
           </figure>
         </a>
         <div class="production__wrapper">
           <a href="#" class="production__item">
             <figure>
               <picture>
-                <!-- 1х: 228px; 2x: 456px
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/pigments-mobile@1x.webp 1x, img/pigments-mobile@2x.webp 2x">-->
-                <!-- 1х: 228px; 2x: 456px -->
-                <!--<source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/pigments-tablet@1x.webp 1x, img/pigments-tablet@2x.webp 2x">-->
-                <!-- 1х: 306px; 2x: 612px -->
-                <!--<source type="image/webp" media="(max-width: 1279px)"
-                  srcset="img/pigments-1024@1x.webp 1x, img/pigments-1024@2x.webp 2x">-->
-                <!-- 1х: 286px; 2x: 572px -->
-                <!--<source type="image/webp" media="(max-width: 1439px)"
-                  srcset="img/pigments-1280@1x.webp 1x, img/pigments-1280@2x.webp 2x">-->
                 <!-- 1х: 356px; 2x: 167px -->
                 <source type="image/webp" srcset="img/pigments-desktop@1x.webp 1x, img/pigments-desktop@2x.webp 2x">
                 <!-- 1х: 356px; 2x: 167px -->
                 <img data-src="img/pigments-desktop@1x.png" src="img/pigments-desktop@1x.png"
-                  srcset="img/pigments-desktop@2x.png 2x" alt="Производство красителей и пигментов" loading="lazy" class="lazyload">
+                  srcset="img/pigments-desktop@2x.png 2x" alt="Производство красителей и пигментов" loading="lazy"
+                  class="lazyload">
               </picture>
               <figcaption>Производство <span>красителей&nbsp;и&nbsp;пигментов</span></figcaption>
             </figure>
@@ -229,23 +206,12 @@
           <a href="#" class="production__item">
             <figure>
               <picture>
-                <!-- 1х: 228px; 2x: 456px
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/cemicals-mobile@1x.webp 1x, img/cemicals-mobile@2x.webp 2x">-->
-                <!-- 1х: 306px; 2x: 612px -->
-                <!--<source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/cemicals-tablet@1x.webp 1x, img/cemicals-tablet@2x.webp 2x">-->
-                <!-- 1х: 306px; 2x: 612px -->
-                <!--<source type="image/webp" media="(max-width: 1279px)"
-                  srcset="img/cemicals-1024@1x.webp 1x, img/cemicals-1024@2x.webp 2x">-->
-                <!-- 1х: 286px; 2x: 572px -->
-                <!--<source type="image/webp" media="(max-width: 1439px)"
-                  srcset="img/cemicals-1280@1x.webp 1x, img/cemicals-1280@2x.webp 2x">-->
                 <!-- 1х: 356px; 2x: 167px -->
                 <source type="image/webp" srcset="img/cemicals-desktop@1x.webp 1x, img/cemicals-desktop@2x.webp 2x">
                 <!-- 1х: 356px; 2x: 167px -->
                 <img data-src="img/cemicals-desktop@1x.png" src="img/cemicals-desktop@1x.png"
-                  srcset="img/cemicals-desktop@2x.png 2x" alt="Производство прочих химических продуктов" loading="lazy" class="lazyload">
+                  srcset="img/cemicals-desktop@2x.png 2x" alt="Производство прочих химических продуктов" loading="lazy"
+                  class="lazyload">
               </picture>
               <figcaption>Производство <span>прочих&nbsp;химических продуктов</span></figcaption>
             </figure>
@@ -269,7 +235,8 @@
 
       <section class="specialisation">
         <h2>Специализация производства</h2>
-        <p class="specialisation__paragraph">Компания специализируется на производстве специальных неорганических материалов на основе редкоземельных
+        <p class="specialisation__paragraph">Компания специализируется на производстве специальных неорганических
+          материалов на основе редкоземельных
           металлов, предназначенных для использования в лазерной технике, оптических приборах, полиграфии.</p>
         <div class="specialisation__wrapper">
           <div class="specialisation__item">
@@ -298,7 +265,8 @@
                     srcset="img/inorganics-desktop@1x.webp 1x, img/inorganics-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <img data-src="img/inorganics-desktop@1x.png" src="img/inorganics-desktop@1x.png"
-                    srcset="img/inorganics-desktop@2x.png 2x" alt="Специальные неорганические материалы" loading="lazy" class="lazyload">
+                    srcset="img/inorganics-desktop@2x.png 2x" alt="Специальные неорганические материалы" loading="lazy"
+                    class="lazyload">
                 </picture>
               </div>
             </a>
@@ -328,8 +296,7 @@
                   <source type="image/webp" srcset="img/dyes-desktop@1x.webp 1x, img/dyes-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <img data-src="img/dyes-desktop@1x.png" src="img/dyes-desktop@1x.png"
-                    srcset="img/dyes-desktop@2x.png 2x" alt="Красители и пигменты"
-                    loading="lazy" class="lazyload">
+                    srcset="img/dyes-desktop@2x.png 2x" alt="Красители и пигменты" loading="lazy" class="lazyload">
                 </picture>
               </div>
             </a>
@@ -359,7 +326,8 @@
                     srcset="img/cemicals-products-desktop@1x.webp 1x, img/cemicals-products-desktop@2x.webp 2x">
                   <!-- 1х: 160px; 2x: 320px -->
                   <img data-src="img/cemicals-products-desktop@1x.png" src="img/cemicals-products-desktop@1x.png"
-                    srcset="img/cemicals-products-desktop@2x.png 2x" alt="Прочие химические продукты" loading="lazy" class="lazyload">
+                    srcset="img/cemicals-products-desktop@2x.png 2x" alt="Прочие химические продукты" loading="lazy"
+                    class="lazyload">
                 </picture>
               </div>
             </a>
@@ -499,7 +467,7 @@
 
   </div>
   <script src="js/vendor.js" defer=""></script>
-  <script src="js/accordion.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

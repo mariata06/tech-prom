@@ -40,3 +40,25 @@ window.onscroll = function showHeader() {
     logoScroll.classList.remove("logo--scroll--show");
   }
 };
+
+// Мобильное меню навигации
+var mobileMenu = document.querySelector(".navigation");
+var burgerButton = document.querySelector(".navigation__burger-menu");
+var closeMenu = document.querySelector(".navigation__close");
+var htmlDoc = document.querySelector("html");
+
+burgerButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  burgerButton.classList.add("navigation__burger-menu--hide");
+  closeMenu.classList.add("navigation__close--show");
+  mobileMenu.classList.add("navigation--mobile");
+  htmlDoc.classList.add("disable-scroll");
+});
+
+closeMenu.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  burgerButton.classList.remove("navigation__burger-menu--hide");
+  closeMenu.classList.remove("navigation__close--show");
+  mobileMenu.classList.remove("navigation--mobile");
+  htmlDoc.classList.toggle("disable-scroll");
+});
