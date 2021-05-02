@@ -141,6 +141,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media (max-width: 767px) {
+    .navigation__contacts {
+      height: 100%;
+      -webkit-box-align: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      padding-top: 12px; } }
   .navigation__contacts span {
     font-size: 14px;
     line-height: 17px;
@@ -209,12 +216,16 @@ a {
   -ms-flex-item-align: baseline;
       align-self: baseline;
   margin-top: 5px; }
+  .navigation__burger-menu--disabled {
+    cursor: not-allowed;
+    pointer-events: none; }
   @media (max-width: 768px) {
     .navigation__burger-menu {
       margin-right: 0; } }
   @media (max-width: 767px) {
     .navigation__burger-menu {
-      margin-right: 10px; } }
+      margin-right: 10px;
+      margin-top: 0; } }
   .navigation__burger-menu--hide {
     display: none; }
   .navigation__burger-menu svg {
@@ -222,6 +233,10 @@ a {
     @media (max-width: 768px) {
       .navigation__burger-menu svg {
         fill: #fc9d40; } }
+    @media (max-width: 767px) {
+      .navigation__burger-menu svg {
+        -webkit-transform: scale(0.8);
+                transform: scale(0.8); } }
 
 .container {
   margin: 0 auto;
@@ -670,7 +685,24 @@ a {
     color: #000000; }
 
 .specialisation {
-  padding-bottom: 111px; }
+  padding-top: 21px;
+  padding-bottom: 111px;
+  background-image: url("../img/brush-stroke-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .specialisation {
+      background-image: url("../img/brush-stroke-desktop@2x.png"); } }
+  @media (max-width: 1280px) {
+    .specialisation {
+      background-size: 24%; } }
+  @media (max-width: 768px) {
+    .specialisation {
+      background-size: 20%; } }
+  @media (max-width: 767px) {
+    .specialisation {
+      padding-top: 3px;
+      background-size: 30%; } }
   .specialisation h2 {
     padding: 0;
     margin: 0;
@@ -684,6 +716,18 @@ a {
       .specialisation h2 {
         font-size: 28px;
         line-height: 28px;
+        font-weight: 600;
+        color: #000000; } }
+    @media (max-width: 768px) {
+      .specialisation h2 {
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 600;
+        color: #000000; } }
+    @media (max-width: 767px) {
+      .specialisation h2 {
+        font-size: 18px;
+        line-height: 18px;
         font-weight: 600;
         color: #000000; } }
   .specialisation .specialisation__paragraph {

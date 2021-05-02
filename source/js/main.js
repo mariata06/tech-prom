@@ -49,9 +49,9 @@ var htmlDoc = document.querySelector("html");
 
 window.addEventListener("resize", function() {
   if (window.innerWidth > 767) {
-    burgerButton.classList.add("navigation__burger-menu--disabled");
+    burgerButton.disabled = true;
   } else {
-    burgerButton.classList.remove("navigation__burger-menu--disabled");
+    burgerButton.disabled = false;
   }
 
   burgerButton.addEventListener("click", function(evt) {
