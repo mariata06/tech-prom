@@ -47,12 +47,20 @@ var burgerButton = document.querySelector(".navigation__burger-menu");
 var closeMenu = document.querySelector(".navigation__close");
 var htmlDoc = document.querySelector("html");
 
-burgerButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  burgerButton.classList.add("navigation__burger-menu--hide");
-  closeMenu.classList.add("navigation__close--show");
-  mobileMenu.classList.add("navigation--mobile");
-  htmlDoc.classList.add("disable-scroll");
+window.addEventListener("resize", function() {
+  if (window.innerWidth > 767) {
+    burgerButton.classList.add("navigation__burger-menu--disabled");
+  } else {
+    burgerButton.classList.remove("navigation__burger-menu--disabled");
+  }
+
+  burgerButton.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    burgerButton.classList.add("navigation__burger-menu--hide");
+    closeMenu.classList.add("navigation__close--show");
+    mobileMenu.classList.add("navigation--mobile");
+    htmlDoc.classList.add("disable-scroll");
+  });
 });
 
 closeMenu.addEventListener("click", function(evt) {

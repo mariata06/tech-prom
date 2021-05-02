@@ -92,12 +92,13 @@ a {
       grid-template-columns: 19% 53% 28%; } }
   @media (max-width: 767px) {
     .navigation {
-      grid-template-columns: 4fr 8fr;
+      grid-template-columns: 8fr 4fr;
       grid-template-areas: "logo contacts"; }
       .navigation--mobile {
         background-color: rgba(0, 11, 21, 0.9);
-        padding-bottom: 115px; }
-        .navigation--mobile .navigation__logo {
+        padding-bottom: 115px;
+        z-index: 150; }
+        .navigation--mobile .navigation__logo img {
           width: 200px;
           height: 80px;
           margin-top: 15px;
@@ -128,6 +129,9 @@ a {
           font-size: 14px;
           line-height: 36px;
           color: #006db5; } }
+
+.navigation__logo {
+  grid-area: logo; }
 
 .navigation__contacts {
   grid-area: contacts;
@@ -323,94 +327,53 @@ a {
       .menu .menu__icon--home {
         display: none; } }
 
-.logo {
-  grid-area: logo;
-  /*
-  &--scroll {
-    img {
-      width: 200px;
-      height: 81px;
-    }
-  }*/ }
-  .logo--scroll {
-    display: none;
-    /*
-    img {
-      width: 200px;
-      height: 81px;
+.logo--scroll {
+  display: none; }
+  @media (max-width: 1024px) {
+    .logo--scroll {
+      width: 148px;
+      height: 60px; } }
+  @media (max-width: 768px) {
+    .logo--scroll {
+      width: 123px;
+      height: 50px; } }
+  @media (max-width: 767px) {
+    .logo--scroll {
+      width: 99px;
+      height: 40px; } }
+  .logo--scroll--show {
+    display: block; }
 
-      @media (max-width: 1024px) {
-        width: 148px;
-        height: 60px;
-      }
+.logo--main--hide {
+  display: none; }
 
-      @media (max-width: 768px) {
-        width: 123px;
-        height: 50px;
-      }
-
-      @media (max-width: $max-mobile-width) {
-        width: 99px;
-        height: 40px;
-      }
-    }*/ }
-    @media (max-width: 1024px) {
-      .logo--scroll {
-        width: 148px;
-        height: 60px; } }
-    @media (max-width: 768px) {
-      .logo--scroll {
-        width: 123px;
-        height: 50px; } }
-    @media (max-width: 767px) {
-      .logo--scroll {
-        width: 99px;
-        height: 40px; } }
-    .logo--scroll--show {
-      display: block; }
+@media (max-width: 1024px) {
   .logo--main {
-    /*
-    img {
-      @media (max-width: 1024px) {
-        height: 60px;
-      }
+    width: 148px;
+    height: 60px; } }
 
-      @media (max-width: 768px) {
-        width: 123px;
-        height: 50px;
-      }
+@media (max-width: 768px) {
+  .logo--main {
+    width: 123px;
+    height: 50px; } }
 
-      @media (max-width: $max-mobile-width) {
-        width: 99px;
-        height: 40px;
-      }
-    }*/ }
-    .logo--main--hide {
-      display: none; }
-    @media (max-width: 1024px) {
-      .logo--main {
-        width: 148px;
-        height: 60px; } }
-    @media (max-width: 768px) {
-      .logo--main {
-        width: 123px;
-        height: 50px; } }
-    @media (max-width: 767px) {
-      .logo--main {
-        width: 99px;
-        height: 40px; } }
-  .logo--footer {
-    margin-left: 16px; }
-    @media (max-width: 1280px) {
-      .logo--footer {
-        margin-left: 38px; } }
-    @media (max-width: 768px) {
-      .logo--footer {
-        margin-left: 0; } }
-    @media (max-width: 1024px) {
-      .logo--footer img {
-        width: 250px;
-        height: 100px; } }
+@media (max-width: 767px) {
+  .logo--main {
+    width: 99px;
+    height: 40px; } }
+
+.logo--footer {
+  margin-left: 16px; }
+  @media (max-width: 1280px) {
+    .logo--footer {
+      margin-left: 38px; } }
+  @media (max-width: 768px) {
+    .logo--footer {
+      margin-left: 0; } }
+  @media (max-width: 1024px) {
+    .logo--footer img {
+      width: 250px;
+      height: 100px; } }
 
 .button {
   cursor: pointer;

@@ -1,5 +1,26 @@
 .specialisation {
+  padding-top: 21px;
   padding-bottom: 111px;
+  background-image: url("../img/brush-stroke-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/brush-stroke-desktop@2x.png");
+  }
+
+  @media (max-width: 1280px) {
+    background-size: 24%;
+  }
+
+  @media (max-width: 768px) {
+    background-size: 20%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-top: 3px;
+    background-size: 30%;
+  }
 
   h2 {
     @include reset;
@@ -9,6 +30,14 @@
 
     @media (max-width: 1280px) {
       @include title ($font-28, $height-28, $semi-bold, $black);
+    }
+
+    @media (max-width: 768px) {
+      @include title ($font-22, $height-22, $semi-bold, $black);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      @include title ($font-18, $height-18, $semi-bold, $black);
     }
   }
 
