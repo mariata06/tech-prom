@@ -1,6 +1,6 @@
-//"use strict";
-//const ghPages = require('gh-pages');
-//const path = require('path');
+"use strict";
+const ghPages = require('gh-pages');
+const path = require('path');
 var gulp = require("gulp");
 var sass = require("gulp-sass");
 var plumber = require("gulp-plumber");
@@ -169,9 +169,7 @@ gulp.task("refresh", function (done) {
 gulp.task("build", gulp.series("clean", "copy", "css", "html", "sprite", "copy_css"));
 gulp.task("start", gulp.series("build", "server"));
 
-/*
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
 exports.deploy = deploy;
-*/

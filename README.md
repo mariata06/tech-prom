@@ -1,5 +1,5 @@
-# Jewellery-shop
-Jewellery shop
+# Tech-prom
+Tech-prom
 
 Установка и сборка проекта
 1. Сначала надо скачать папку с проектом с гитхаба
